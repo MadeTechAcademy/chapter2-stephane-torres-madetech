@@ -1,0 +1,3 @@
+FROM ruby:3.4.0-preview1-slim-bullseye
+
+CMD ["ruby", "--version"]
