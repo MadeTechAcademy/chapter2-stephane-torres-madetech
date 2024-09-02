@@ -7,18 +7,16 @@ RUN rm /var/cache/apk/*
 
 RUN npm i -g npm@9 serverless@3
  
-ENV GEM_HOME="/usr/local/bundle"
-ENV PATH=$GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
+ENV GEM_HOME="/usr/local/bundle" PATH=$GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
 COPY entrypoint.sh /usr/local/bin/
 
 # Install gems
-COPY Gemfile ./
-COPY Gemfile.lock ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 # selectively copy the tests to the image's working directory
-COPY tests/ /tests/
-COPY Rakefile /tests/
+COPY tests/ Rakefile /tests/
+
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
