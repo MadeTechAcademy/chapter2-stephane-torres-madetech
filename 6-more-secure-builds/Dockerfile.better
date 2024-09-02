@@ -1,0 +1,21 @@
+ARG NODE_VERSION=20
+ARG GITHUB_PAT="secret"
+
+FROM node:${NODE_VERSION}-alpine
+
+ENV NODE_ENV=production
+ARG GITHUB_PAT
+ENV GITHUB_PAT=${GITHUB_PAT}
+
+WORKDIR /usr/src/app
+
+COPY .npmrc ./.npmrc
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+
+# this install command won't work!
+RUN npm ci --omit=dev
+
+COPY . .
+
+CMD node src/index.js
