@@ -15,5 +15,5 @@ RUN npm i -g npm@9
 RUN npm install -g serverless@3
 
 ENV GEM_HOME="/usr/local/bundle"
-ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
+ENV PATH=$GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 

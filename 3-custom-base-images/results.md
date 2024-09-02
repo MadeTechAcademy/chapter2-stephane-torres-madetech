@@ -4,6 +4,7 @@ Commit your data here
 
 App1 original build time: 161.4s
 App2 original build time: 6.8s => 0.6s even after running docker builder prune
+Ran docker builder prune -a => 158.7
 Custom base build time:
 Better app 1 built time:
 
