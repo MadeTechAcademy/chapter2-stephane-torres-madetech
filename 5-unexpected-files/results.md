@@ -22,6 +22,17 @@ Original build file listing:
 
 Better build file listing:
 
+/my-app
+├── Gemfile
+├── Gemfile.lock
+├── Rakefile
+├── app
+├── entrypoint.sh
+└── tests
+    ├── out
+    │   └── first_test_log.txt
+    └── test_something.rb
+
 
 
 
