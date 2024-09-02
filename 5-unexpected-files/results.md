@@ -4,14 +4,14 @@ Commit your data here
 
 Original build file listing:
 /my-app
-├── Dockerfile
+├── .dockerignore
 ├── Gemfile
 ├── Gemfile.lock
 ├── Rakefile
 ├── app
+│   ├── .env
+│   └── .ruby-version
 ├── entrypoint.sh
-├── readme.md
-├── results.md
 └── tests
     ├── out
     │   └── first_test_log.txt
@@ -23,10 +23,12 @@ Original build file listing:
 Better build file listing:
 
 /my-app
+├── .dockerignore
 ├── Gemfile
 ├── Gemfile.lock
 ├── Rakefile
 ├── app
+│   └── .ruby-version
 ├── entrypoint.sh
 └── tests
     ├── out
