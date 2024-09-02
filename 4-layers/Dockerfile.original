@@ -1,6 +1,6 @@
 FROM ruby:alpine
 
-RUN apk update
+RUN apk update 
 RUN apk add --no-cache alpine-sdk libmagic \
     nodejs npm postgresql-dev
 RUN apk add chromium
