@@ -5,11 +5,12 @@ Commit your answers to these questions in your copy
 ## Part 1
 Answer these after a day or two to see how much you remember
 
-1. What principle(s) can we apply to improve the size of images?
+1. What principle(s) can we apply to improve the size of images?\
+
     Using different/better base images and tags, making sure we are only building using what we actually need, 
     minimising bloat.
     We can inspect the size of an image (in bytes) by running 
-    
+
     ```
       docker inspect -f "{{ .Size }}" <image name>
     ```
@@ -17,7 +18,7 @@ Answer these after a day or two to see how much you remember
     May need to pull the image locally to be able to do this  
     Docker Hub is a massive image respository, searchable and filterable to help find images that may be useful
 
-2. What principle(s) can we apply to speed up rebuilds of images locally?
+2. What principle(s) can we apply to speed up rebuilds of images locally?\
     Using caching, order of commands, using more appropriate images as above.
     Ensuring a more efficient order to our commands along with caching means we can avoid rebuilding layers that might necessarily 
     change that often, example, installing dependencies close to the top of our image and copying test files that might change quite 
@@ -27,13 +28,13 @@ Answer these after a day or two to see how much you remember
     Creating and using custom base images can also help with speeding up, pulling out commonly used commands to build a different images
     into a custom image and then having that made locally can reduce the time locally.
 
-3. What principles can we apply to speed up builds of an image in a pipeline?
+3. What principles can we apply to speed up builds of an image in a pipeline?\
 
 4. What are examples of artefacts, files or values we would not want to have baked into a shipped image used in production and why?
     Might not want to share your Dockerfile, any files with secrets present like API keys of PAT (tokens), stop those who may have malicious
     intentions from being able to access what they shouldn't, them in the dark about how our projects might be made and potential vulnerabilities.
 
-5. What principles can we apply to avoid this?
+5. What principles can we apply to avoid this?\
     Using a .dockerignore file so that certain files/folders aren't copied and built 
     Using multistage builds to hide what was baked into previous images/steps
 
