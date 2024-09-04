@@ -10,6 +10,7 @@ Answer these after a day or two to see how much you remember
     minimising bloat.
     We can inspect the size of an image (in bytes) by running docker inspect -f "{{ .Size }}" <image name>
     May need to pull the image locally to be able to do this  
+    Docker Hub is a massive image respository, searchable and filterable to help find images that may be useful
 
 2. What principle(s) can we apply to speed up rebuilds of images locally?
     Using caching, order of commands, using more appropriate images as above.
@@ -18,8 +19,11 @@ Answer these after a day or two to see how much you remember
     a bit further down in the execution.
     Layers will be rebuilt even if they themselves haven't changed but any above them have.
 
+    Creating and using custom base images can also help with speeding up, pulling out commonly used commands to build a different images
+    into a custom image and then having that made locally can reduce the time locally.
+
 3. What principles can we apply to speed up builds of an image in a pipeline?
-    
+
 4. What are examples of artefacts, files or values we would not want to have baked into a shipped image used in production and why?
     Might not want to share your Dockerfile, any files with secrets present like API keys of PAT (tokens), stop those who may have malicious
     intentions from being able to access what they shouldn't, them in the dark about how our projects might be made and potential vulnerabilities.
