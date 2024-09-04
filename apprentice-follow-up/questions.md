@@ -8,7 +8,12 @@ Answer these after a day or two to see how much you remember
 1. What principle(s) can we apply to improve the size of images?
     Using different/better base images and tags, making sure we are only building using what we actually need, 
     minimising bloat.
-    We can inspect the size of an image (in bytes) by running docker inspect -f "{{ .Size }}" <image name>
+    We can inspect the size of an image (in bytes) by running 
+    
+    ```
+      docker inspect -f "{{ .Size }}" <image name>
+    ```
+  
     May need to pull the image locally to be able to do this  
     Docker Hub is a massive image respository, searchable and filterable to help find images that may be useful
 
