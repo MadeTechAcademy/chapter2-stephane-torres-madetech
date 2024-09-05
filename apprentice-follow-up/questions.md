@@ -14,9 +14,16 @@ Answer these after a day or two to see how much you remember
     ```
       docker inspect -f "{{ .Size }}" <image name>
     ```
-  
     May need to pull the image locally to be able to do this  
     Docker Hub is a massive image respository, searchable and filterable to help find images that may be useful
+
+    OR 
+
+    ```
+     docker images
+    ```
+    To list all of docker images built locally with their size.
+   
 
 2. What principle(s) can we apply to speed up rebuilds of images locally?<br />
     Using caching, order of commands, using more appropriate images as above.
@@ -35,7 +42,7 @@ Answer these after a day or two to see how much you remember
     intentions from being able to access what they shouldn't, them in the dark about how our projects might be made and potential vulnerabilities.
 
 5. What principles can we apply to avoid this?<br />
-    Using a .dockerignore file so that certain files/folders aren't copied and built 
+    Using a .dockerignore file so that certain files/folders aren't copied and built<br /> 
     Using multistage builds to hide what was baked into previous images/steps
 
 6. Which exercise had the biggest impact on the image quality and why?

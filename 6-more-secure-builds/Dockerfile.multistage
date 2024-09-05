@@ -19,9 +19,6 @@ COPY . .
 FROM node:${NODE_VERSION}-alpine
 WORKDIR /usr/src/app
 
-COPY --from=build /usr/src/app/.npmrc ./.npmrc
-COPY --from=build /usr/src/app/package.json package.json
-COPY --from=build /usr/src/app/package-lock.json package-lock.json
 COPY --from=build /usr/src/app/src src/
 
 CMD node src/index.js
