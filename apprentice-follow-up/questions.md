@@ -36,16 +36,17 @@ Answer these after a day or two to see how much you remember
     into a custom image and then having that made locally can reduce the time locally.
 
 3. What principles can we apply to speed up builds of an image in a pipeline?<br />
+    Choosing the correct/more appropriate base images and only baking/building what we actually need 
 
 4. What are examples of artefacts, files or values we would not want to have baked into a shipped image used in production and why?
-    Might not want to share your Dockerfile, any files with secrets present like API keys of PAT (tokens), stop those who may have malicious
-    intentions from being able to access what they shouldn't, them in the dark about how our projects might be made and potential vulnerabilities.
+    Might not want to share your Dockerfile, shows what images we're using and potentially how our project might work. Any files with secrets present like API keys or PAT (tokens) We want to stop those who may have malicious intentions from being able to access what they shouldn't, keeping these people in the dark about how our projects might be made and potential vulnerabilities.
 
 5. What principles can we apply to avoid this?<br />
-    Using a .dockerignore file so that certain files/folders aren't copied and built<br /> 
-    Using multistage builds to hide what was baked into previous images/steps
+    Using a .dockerignore file so that certain files/folders aren't copied/built<br /> 
+    Using multistage builds to hide what was baked into previous images/stages 
 
 6. Which exercise had the biggest impact on the image quality and why?
+    
 
 ## Part 2
 Answer these after some reflection on your delivery
