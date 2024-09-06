@@ -50,9 +50,6 @@ e6911bc52d25   41 seconds ago   CMD ["/bin/sh" "-c" "node src/index.js"]        
 Output from multistage image when run:
 
 [
-  '/usr/src/app/src/../.npmrc',
-  '/usr/src/app/src/../package-lock.json',
-  '/usr/src/app/src/../package.json',
   '/usr/src/app/src/../src/index.js'
 ]
 
