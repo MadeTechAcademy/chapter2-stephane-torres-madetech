@@ -17,8 +17,9 @@ RUN npm ci --omit=dev
 COPY . .
 
 FROM node:${NODE_VERSION}-alpine
-WORKDIR /usr/src/app
 
+WORKDIR /usr/src/app
+# need to COPY node_modules 
 COPY --from=build /usr/src/app/src src/
 
 CMD node src/index.js

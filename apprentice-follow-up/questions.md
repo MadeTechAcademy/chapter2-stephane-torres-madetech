@@ -52,8 +52,13 @@ Answer these after a day or two to see how much you remember
 ## Part 2
 Answer these after some reflection on your delivery
 
-1. Which is the most important type of problem to fix first and why?
-2. What problem have you spotted on your delivery that either needs improving or has been solved by one of these approaches? (or another approach we haven’t discussed)
-3. Give an example of a problem you spotted and the proposal you made for it to be fixed
-4. Give an example of a problem you were involved in fixing and the impact that the fix brought. How was the impact measured?
+1. Which is the most important type of problem to fix first and why?<br/>
+    - In general I think security is probably the most important to make sure nothing is being exposed that shouldn't and knowing how to keep what needs to be hidden away hidden, on our delivery all of our repos are public so we are not necessarily hiding how our project is structured, but the keys, names of resources, AWS account numbers etc remain hidden, but aren't exposed in our Dockerfiles.
+    - After that we need to make sure it works, quickly and efficiently, so size and order are super important for this. 
+2. What problem have you spotted on your delivery that either needs improving or has been solved by one of these approaches? (or another approach we haven’t discussed)<br/>
+    - Image size and rebuild speed in development. Making sure an image only usese what it needs.
+3. Give an example of a problem you spotted and the proposal you made for it to be fixed.
+    - Introducing a .dockerignore file to so that Docker doesn't build unecessary files and folders present in our lambdas files, and not needing to restructure. Also changing some of the order or the file, adding in a copy step for our requirements before pip installing and copying the rest of the needed files over helps with local building of the image, taking advantage of Dockers local caching
+4. Give an example of a problem you were involved in fixing and the impact that the fix brought. How was the impact measured?<br/>
+    - In local development, just a slightly quicker image build by using caching, and a slightly smaller image size to push
 
