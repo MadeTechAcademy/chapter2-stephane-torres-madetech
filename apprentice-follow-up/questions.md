@@ -60,5 +60,14 @@ Answer these after some reflection on your delivery
 3. Give an example of a problem you spotted and the proposal you made for it to be fixed.
     - Introducing a .dockerignore file to so that Docker doesn't build unecessary files and folders present in our lambdas files, and not needing to restructure. Also changing some of the order or the file, adding in a copy step for our requirements before pip installing and copying the rest of the needed files over helps with local building of the image, taking advantage of Dockers local caching
 4. Give an example of a problem you were involved in fixing and the impact that the fix brought. How was the impact measured?<br/>
-    - In local development, just a slightly quicker image build by using caching, and a slightly smaller image size to push
+    - In local development, just a slightly quicker image build by using caching, and a slightly smaller image size to push 
+    REPOSITORY                                                                TAG       IMAGE ID       CREATED        SIZE
+batch-image                                                               latest    9dee18155dcb   5 hours ago    198MB
+<none>                                                                    <none>    3826b04cf7cd   5 hours ago    199MB
+<none>                                                                    <none>    ddff9d97b05f   5 hours ago    199MB
+<none>                                                                    <none>    5d83b25f1799   5 hours ago    198MB
+<none>                                                                    <none>    4bcd4979fc07   5 hours ago    507MB
+<none>                                                                    <none>    13f48de2c322   5 hours ago    507MB
+<none>                                                                    <none>    e201194478ca   5 hours ago    198MB
+533825906475.dkr.ecr.eu-west-2.amazonaws.com/ndra-weekly-ods-update       latest    793366f0238d   2 days ago     513MB
 
