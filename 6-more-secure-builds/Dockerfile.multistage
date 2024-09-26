@@ -12,9 +12,11 @@ COPY .npmrc ./.npmrc
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 
-COPY . .
 
 RUN npm ci --omit=dev
+
+COPY **/node_modules node_modules
+COPY src/index.js src/index.js
 
 
 
@@ -22,6 +24,7 @@ FROM node:${NODE_VERSION}-alpine
 
 WORKDIR /usr/src/app
 
+COPY --from=build /usr/src/app/node_modules node_modules
 COPY --from=build /usr/src/app/src src/
 
 CMD node src/index.js
