@@ -7,6 +7,7 @@ Error message(s) from original build:
 
 Output from better image when run:
 
+```
 [
   '/usr/src/app/src/../.npmrc',
   '/usr/src/app/src/../.nvmrc',
@@ -20,9 +21,13 @@ Output from better image when run:
   '/usr/src/app/src/../src/index.js'
 ]
 
+```
+
+
 
 History listing from better image:
 
+```
 IMAGE          CREATED          CREATED BY                                      SIZE      COMMENT
 e6911bc52d25   41 seconds ago   CMD ["/bin/sh" "-c" "node src/index.js"]        0B        buildkit.dockerfile.v0
 <missing>      41 seconds ago   COPY . . # buildkit                             230kB     buildkit.dockerfile.v0
@@ -44,18 +49,22 @@ e6911bc52d25   41 seconds ago   CMD ["/bin/sh" "-c" "node src/index.js"]        
 <missing>      11 days ago      ENV NODE_VERSION=20.17.0                        0B        buildkit.dockerfile.v0
 <missing>      5 weeks ago      /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B        
 <missing>      5 weeks ago      /bin/sh -c #(nop) ADD file:a71f7e9bc66668361…   8.83MB  
+```
+
 
 
 
 Output from multistage image when run:
 
+
+```
 [
   '/usr/src/app/src/../src/index.js'
 ]
-
+```
 
 History listing from multistage image:
-
+```
 IMAGE          CREATED              CREATED BY                                      SIZE      COMMENT
 a348eb9fe0c3   About a minute ago   CMD ["/bin/sh" "-c" "node src/index.js"]        0B        buildkit.dockerfile.v0
 <missing>      About a minute ago   COPY /usr/src/app/src src/ # buildkit           473B      buildkit.dockerfile.v0
@@ -69,4 +78,5 @@ a348eb9fe0c3   About a minute ago   CMD ["/bin/sh" "-c" "node src/index.js"]    
 <missing>      2 weeks ago          ENV NODE_VERSION=20.17.0                        0B        buildkit.dockerfile.v0
 <missing>      6 weeks ago          /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B        
 <missing>      6 weeks ago          /bin/sh -c #(nop) ADD file:a71f7e9bc66668361…   8.83MB 
+```
 
