@@ -36,6 +36,19 @@ Better build file listing:
     └── test_something.rb
 
 
+Reworked:
+/my-app
+├── Gemfile
+├── Gemfile.lock
+├── Rakefile
+├── app
+│   └── .ruby-version
+└── entrypoint.sh
+
+2 directories, 5 files
+Well done Steph!
+
+
 
 
 
