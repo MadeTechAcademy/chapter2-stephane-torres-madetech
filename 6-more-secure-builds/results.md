@@ -79,4 +79,7 @@ a348eb9fe0c3   About a minute ago   CMD ["/bin/sh" "-c" "node src/index.js"]    
 <missing>      6 weeks ago          /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B        
 <missing>      6 weeks ago          /bin/sh -c #(nop) ADD file:a71f7e9bc66668361…   8.83MB 
 ```
+Interestingly, using command 'COPY . .' in Dockerfile.multistage both before and after 'npm ci' allows the image to be built without
+any errors and for it to run correctly, suggesting something isn't quite right.
 
+Trying to copy just the node_modules has been failing, could this be because they are included in the .dockerignore?
