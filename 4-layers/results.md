@@ -2,12 +2,12 @@
 
 Commit your data here
 
-Original build layers:
-Original rebuild; layers from cache:
-Original with updated rakefile; layers from cache:
+Original build layers: 16
+Original rebuild; layers from cache: 15
+Original with updated rakefile; layers from cache: 10
 
-Better build layers:
-Better build; layers from cache:
+Better build layers: 9
+Better build; layers from cache: 8
 
 
 

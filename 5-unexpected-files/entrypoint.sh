@@ -1,3 +1,5 @@
 #!/bin/sh
 
-tree /my-app
+tree -a /my-app
+
+echo "Well done Steph!"

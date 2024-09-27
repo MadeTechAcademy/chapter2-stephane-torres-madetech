@@ -1,0 +1,13 @@
+FROM docker-deep-dive/ex3/common
+
+# selectively copy the tests to the image's working directory
+COPY functional-tests/ /tests/
+COPY Rakefile /tests/
+COPY entrypoint.sh /usr/local/bin/
+
+# Install gems
+COPY Gemfile ./
+COPY Gemfile.lock ./
+RUN bundle install
+
+ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
