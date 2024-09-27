@@ -15,7 +15,6 @@ COPY package-lock.json package-lock.json
 
 RUN npm ci --omit=dev
 
-COPY **/node_modules node_modules
 COPY src/index.js src/index.js
 
 
